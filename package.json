@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "aframe-ground-component": "^0.0.5",
     "aframe-watcher": "^1.4.0"
   }
 }
