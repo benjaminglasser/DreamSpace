@@ -27,13 +27,14 @@
 		joystick shadow="type: pcfsoft; autoUpdate: true;" >
             <!-- Assets -->
             <a-assets>
-				<a-asset-item id="campfire" src="./assets/campfire.gltf"></a-asset-item>
+				<!-- <a-asset-item id="campfire" src="./assets/campfire.gltf"></a-asset-item> -->
+				<a-asset-item id="bonfire" src="./assets/bonfire.gltf"></a-asset-item>
 				<a-asset-item id="G Tree C" src="./assets/G Tree C.gltf"></a-asset-item>
 				<a-asset-item id="G Tree D" src="./assets/G Tree D.gltf"></a-asset-item>
 				<a-asset-item id="Icosphere" src="./assets/Icosphere.gltf"></a-asset-item>
 				<a-asset-item id="Icosphere.001" src="./assets/Icosphere.001.gltf"></a-asset-item>
-				<a-asset-item id="Plane.002" src="./assets/Plane.002.gltf"></a-asset-item>
-				<a-asset-item id="Sphere" src="./assets/Sphere.gltf"></a-asset-item>
+				<!-- <a-asset-item id="Plane.002" src="./assets/Plane.002.gltf"></a-asset-item> -->
+				<!-- <a-asset-item id="Sphere" src="./assets/Sphere.gltf"></a-asset-item> -->
                 <img id="sky"  src="./resources/sky.jpg">
                 <audio id="rivers" src="media/rivers_of_sand.mp3"></audio>
                 <!-- <img id="glitch" src="https://wallpaperaccess.com/full/1194843.png"> -->
@@ -49,8 +50,9 @@
             <!-- Entities -->
             
             <!-- <a-entity ground="preset: forest; groundColor: #445; grid: cross"></a-entity> -->
-			<a-entity id="#campfire" gltf-model="#campfire" scale="1 1 1"  position="-0.06267929822206497 0.1751229465007782 -0.12052148580551147" visible="true" shadow="cast: true"  geometry="" cube-env-map="path: /env/; extension: jpg; reflectivity: 0.99;" ></a-entity>
-			<a-entity id="#G Tree C" gltf-model="#G Tree C" scale="1 1 1"  position="-5.4047956466674805 11.700007438659668 -0.015014596283435822" visible="true" shadow="cast: true"></a-entity>
+			<!-- <a-entity id="#campfire" gltf-model="#campfire" scale="1 1 1"  position="-0.06267929822206497 0.1751229465007782 -0.12052148580551147" visible="true" shadow="cast: true"  geometry="" cube-env-map="path: /env/; extension: jpg; reflectivity: 0.99;" ></a-entity> -->
+			<a-entity gltf-model="#bonfire"></a-entity>
+            <a-entity id="#G Tree C" gltf-model="#G Tree C" scale="1 1 1"  position="-5.4047956466674805 11.700007438659668 -0.015014596283435822" visible="true" shadow="cast: true"></a-entity>
 			<a-entity id="#G Tree D" gltf-model="#G Tree D" scale="1 1 1"  position="11.248276710510254 11.787817001342773 0.5721824765205383" visible="true" shadow="cast: true" ></a-entity>
 			<!-- <a-entity id="#Icosphere" color="#ECECEC" gltf-model="#Icosphere" scale="1 1 1" position="-8.308791439048946e-05 3.2936484813690186 -4.483861175685888e-06" visible="true" shadow="cast: true"  geometry="" ></a-entity> -->
             <a-sphere shadow="receive: true" radius="-20" color="#FFFFF" material="shader: skyshader; side: front" geometry="" id="sphere-2"></a-sphere>			
