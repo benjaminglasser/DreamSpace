@@ -27,45 +27,51 @@
 		joystick shadow="type: pcfsoft; autoUpdate: true;" >
             <!-- Assets -->
             <a-assets>
-				<!-- <a-asset-item id="campfire" src="./assets/campfire.gltf"></a-asset-item> -->
 				<a-asset-item id="bonfire" src="./assets/bonfire.gltf"></a-asset-item>
 				<a-asset-item id="G Tree C" src="./assets/G Tree C.gltf"></a-asset-item>
 				<a-asset-item id="G Tree D" src="./assets/G Tree D.gltf"></a-asset-item>
 				<a-asset-item id="Icosphere" src="./assets/Icosphere.gltf"></a-asset-item>
 				<a-asset-item id="Icosphere.001" src="./assets/Icosphere.001.gltf"></a-asset-item>
-				<!-- <a-asset-item id="Plane.002" src="./assets/Plane.002.gltf"></a-asset-item> -->
-				<!-- <a-asset-item id="Sphere" src="./assets/Sphere.gltf"></a-asset-item> -->
                 <img id="sky"  src="./resources/sky.jpg">
                 <audio id="rivers" src="media/rivers_of_sand.mp3"></audio>
-                <!-- <img id="glitch" src="https://wallpaperaccess.com/full/1194843.png"> -->
-                <!-- <img id="icon-play"           src="./resources/play.png">
-                <img id="icon-pause"          src="./resources/pause.png">
-                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
-                <img id="icon-mute"           src="./resources/mute.png">
-                <img id="icon-volume-low"     src="./resources/volume-low.png">
-                <img id="icon-volume-high"    src="./resources/volume-high.png"> -->
+                <audio id="bioplastics" src="media/bioplastics.mp3"></audio>
+               
 				<img id="glitch" src="media/glitch.png">
             </a-assets>
 
             <!-- Entities -->
             
-            <!-- <a-entity ground="preset: forest; groundColor: #445; grid: cross"></a-entity> -->
-			<!-- <a-entity id="#campfire" gltf-model="#campfire" scale="1 1 1"  position="-0.06267929822206497 0.1751229465007782 -0.12052148580551147" visible="true" shadow="cast: true"  geometry="" cube-env-map="path: /env/; extension: jpg; reflectivity: 0.99;" ></a-entity> -->
 			<a-entity gltf-model="#bonfire"></a-entity>
+			<!-- <a-entity gltf-model="#tree2" scale="1 1 1" position="0 0 0"  shadow="cast: true"></a-entity> -->
             <a-entity id="#G Tree C" gltf-model="#G Tree C" scale="1 1 1"  position="-5.4047956466674805 11.700007438659668 -0.015014596283435822" visible="true" shadow="cast: true"></a-entity>
 			<a-entity id="#G Tree D" gltf-model="#G Tree D" scale="1 1 1"  position="11.248276710510254 11.787817001342773 0.5721824765205383" visible="true" shadow="cast: true" ></a-entity>
 			<!-- <a-entity id="#Icosphere" color="#ECECEC" gltf-model="#Icosphere" scale="1 1 1" position="-8.308791439048946e-05 3.2936484813690186 -4.483861175685888e-06" visible="true" shadow="cast: true"  geometry="" ></a-entity> -->
             <a-sphere shadow="receive: true" radius="-20" color="#FFFFF" material="shader: skyshader; side: front" geometry="" id="sphere-2"></a-sphere>			
             <a-sphere 
-            sound="src: #rivers; autoplay: true; refDistance: 5; rolloffFactor: 10"
+            sound="src: #rivers; autoplay: true; refDistance: 15; rolloffFactor: 100; loop: true"
             shadow="cast: true"
-            id="#musicBall" material="emissive: #ff932e; emissiveIntensity: 0.45; metalness: 1; " 
+            id="#musicBall" material="emissive: #ff932e; emissiveIntensity: 0.95; metalness: 1; " 
             position="0 1.574 0" radius=".25" color="#EF2D5E" animation="property: position; to: 0 1.3 0; dur: 3000; easing: linear; loop: true; dir: alternate"></a-sphere>
-			<a-entity shadow="cast: true" id="#Icosphere.001" gltf-model="#Icosphere.001" scale="1 1 1" position="-7.787958020344377e-05 36.137813568115234 -3.514571289997548e-05" visible="true" shadow="cast: true" ></a-entity>
+			
+            <a-sphere 
+            sound="src: #bioplastics; autoplay: true; refDistance: 30; rolloffFactor: 100; loop: true"
+            id="#mainMusic" 
+            position="0 0 50" radius=".25" ></a-sphere>
+            <a-sphere 
+            sound="src: #bioplastics; autoplay: true; refDistance: 30; rolloffFactor: 100; loop: true"
+            id="#mainMusic2" 
+            position="0 0 -50" radius=".25" ></a-sphere>
+            <a-sphere 
+            sound="src: #bioplastics; autoplay: true; refDistance: 30; rolloffFactor: 100; loop: true"
+            id="#mainMusic3" 
+            position="50 0 0" radius=".25" ></a-sphere>
+            <a-sphere 
+            sound="src: #bioplastics; autoplay: true; refDistance: 30; rolloffFactor: 100; loop: true"
+            id="#mainMusi4" 
+            position="-50 0 0" radius=".25" ></a-sphere>
+            
+            <a-entity shadow="cast: true" id="#Icosphere.001" gltf-model="#Icosphere.001" scale="1 1 1" position="-7.787958020344377e-05 36.137813568115234 -3.514571289997548e-05" visible="true" shadow="cast: true" ></a-entity>
             <a-circle radius="20" rotation="-90 0 0"shadow="receive: true" id="floor" color="#130d06" position="0 0 0"  ></a-circle>
-			<!-- <a-entity id="#Plane.002" gltf-model="#Plane.002" scale="1 1 1" position="0.0 0.0 -0.0" visible="true" shadow="cast: true" cube-env-map="path: /env/; extension: jpg; reflectivity: 0.09;" ></a-entity> -->
-			<!-- <a-entity id="#Sphere" gltf-model="#Sphere" scale="1 1 1" position="2.942644528047822e-08 0.9957168698310852 3.679960158819995e-08" visible="true" shadow="cast: true"  geometry="" cube-env-map="path: /env/; extension: jpg; reflectivity: 0.99;" ></a-entity> -->
-			<!-- <a-entity geometry="primitive: plane; height: 19.48; width: 20" rotation="90 0 0" position="0 0 0"></a-entity> -->
             <!-- Camera -->
             <a-entity id="player" 
                 position="0 -0.2 0" 
@@ -87,7 +93,6 @@
 
             <!-- Lights -->
             
-			<!-- <a-entity position="0.0 1 0.0" light="castShadow:true; color:#fbfff7; distance:40.0; type:point; intensity:2.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity> -->
             <a-entity
             light="type:ambient;
             color: #BBB"
@@ -99,12 +104,10 @@
             castShadow:true"
             position="-0.5 1 1 "
             ></a-entity>
-            <!-- <a-entity light="type:ambient; intensity:0.2"></a-entity> -->
-            <!-- <a-entity light="type:point; intensity:0.8; distance: 10; castShadow: true" position="0 1 0"></a-entity> -->
 
             <!-- Sky -->
             <a-sky src="#glitch"></a-sky>
-			<!-- <a-videosphere src="glitch"></a-videosphere> -->
+			
         </a-scene>
     </body>
 </html>
