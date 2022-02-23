@@ -27,7 +27,7 @@
 		joystick shadow="type: pcfsoft; autoUpdate: true;" >
             <!-- Assets -->
             <a-assets>
-				<!-- <a-asset-item id="bonfire" src="./assets/Bonfire.gltf"></a-asset-item> -->
+				<a-asset-item id="bonfire" src="./assets/Bonfire.gltf"></a-asset-item>
 				<a-asset-item id="G Tree C" src="./assets/G Tree C.gltf"></a-asset-item>
 				<a-asset-item id="G Tree D" src="./assets/G Tree D.gltf"></a-asset-item>
 				<a-asset-item id="Icosphere" src="./assets/Icosphere.gltf"></a-asset-item>
@@ -41,11 +41,9 @@
 
             <!-- Entities -->
             
-			<!-- <a-entity gltf-model="#bonfire"></a-entity> -->
-			<!-- <a-entity gltf-model="#tree2" scale="1 1 1" position="0 0 0"  shadow="cast: true"></a-entity> -->
+			<a-entity gltf-model="#bonfire"></a-entity>
             <a-entity id="#G Tree C" gltf-model="#G Tree C" scale="1 1 1"  position="-5.4047956466674805 11.700007438659668 -0.015014596283435822" visible="true" shadow="cast: true"></a-entity>
 			<a-entity id="#G Tree D" gltf-model="#G Tree D" scale="1 1 1"  position="11.248276710510254 11.787817001342773 0.5721824765205383" visible="true" shadow="cast: true" ></a-entity>
-			<!-- <a-entity id="#Icosphere" color="#ECECEC" gltf-model="#Icosphere" scale="1 1 1" position="-8.308791439048946e-05 3.2936484813690186 -4.483861175685888e-06" visible="true" shadow="cast: true"  geometry="" ></a-entity> -->
             <a-sphere shadow="receive: true" radius="-20" color="#FFFFF" material="shader: skyshader; side: front" geometry="" id="sphere-2"></a-sphere>			
             <a-sphere 
             sound="src: #rivers; autoplay: true; refDistance: 15; rolloffFactor: 100; loop: true"
