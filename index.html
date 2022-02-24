@@ -74,9 +74,31 @@
             sound="src: #Bioplastics; autoplay: true; refDistance: 60; rolloffFactor: 150; loop: true; distanceModel: exponential"
             id="#mainMusi4" 
             position="-80 0 0" radius=".25" visible="false"></a-sphere>
-
-            <a-entity animation="property: rotation; to: 360 360 360; dur: 20000; easing: linear; loop: true; dir: alternate">
-                <a-sphere id="eye" src="./resources/eyeball.jpeg" radius="10" position="-25 60 -25" animation="property: rotation; to: 360 360 360; dur: 3000; easing: linear; loop: true; dir: alternate"></a-sphere>
+            
+            
+            <!-- <a-entity animation="property: rotation; to: -360 360 -360; dur: 50000; easing: linear; loop: true; dir: alternate">
+                <a-sphere id="eye" src="./resources/eyeball.jpeg" color="#e25822" radius="10" position="25 80 25" animation="property: rotation; to: 360 360 360; dur: 7000; easing: linear; loop: true; dir: alternate"></a-sphere>
+                <a-entity
+                    light="type:point;
+                    color: #e25822;
+                    intensity:3;
+                    castShadow:true"
+                    position="0 0.5 0 "
+                ></a-entity>
+    
+            </a-entity> -->
+            
+            
+            <a-entity animation="property: rotation; to: 360 360 360; dur: 30000; easing: linear; loop: true; dir: alternate">
+                <a-icosahedron id="eye2" material="roughness:0.5; metalness: 1; " color="#e25822" radius="10" position="-55 80 35" animation="property: rotation; to: 360 360 360; dur: 10000; easing: linear; loop: true; dir: alternate"></a-icosahedron>
+                <a-entity
+                    light="type:point;
+                    color: #e25822;
+                    intensity:3;
+                    castShadow:true"
+                    position="0 1 0 "
+                ></a-entity>
+            
             </a-entity>
             
             
@@ -114,7 +136,7 @@
             ></a-entity>
 
             <!-- Sky -->
-            <a-sky src="#glitch" animation="property: rotation; to: 360 360 360; dur: 500000; easing: linear; loop: true; dir: alternate"></a-sky>
+            <a-sky src="#glitch" animation="property: rotation; to: 360 360 360; dur: 900000; easing: linear; loop: true; dir: alternate"></a-sky>
 			
         </a-scene>
 
