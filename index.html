@@ -74,6 +74,10 @@
             sound="src: #Bioplastics; autoplay: true; refDistance: 60; rolloffFactor: 150; loop: true; distanceModel: exponential"
             id="#mainMusi4" 
             position="-80 0 0" radius=".25" visible="false"></a-sphere>
+
+            <a-entity animation="property: rotation; to: 360 360 360; dur: 20000; easing: linear; loop: true; dir: alternate">
+                <a-sphere id="eye" src="./resources/eyeball.jpeg" radius="10" position="-25 60 -25" animation="property: rotation; to: 360 360 360; dur: 3000; easing: linear; loop: true; dir: alternate"></a-sphere>
+            </a-entity>
             
             
             <a-entity shadow="cast: true" id="#Icosphere.001" gltf-model="#Icosphere.001" scale="1 1 1" position="-7.787958020344377e-05 36.137813568115234 -3.514571289997548e-05" visible="true" shadow="cast: true" ></a-entity>
@@ -110,7 +114,7 @@
             ></a-entity>
 
             <!-- Sky -->
-            <a-sky src="#glitch"></a-sky>
+            <a-sky src="#glitch" animation="property: rotation; to: 360 360 360; dur: 500000; easing: linear; loop: true; dir: alternate"></a-sky>
 			
         </a-scene>
 
